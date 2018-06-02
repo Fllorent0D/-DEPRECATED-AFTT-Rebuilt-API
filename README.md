@@ -1,16 +1,76 @@
-# Slim Framework 3 Skeleton Application
+# AFTT reverse engineered API
+This api allows you to use the AFTT's API easier. It uses standard REST requests. The quality of the data coming from this API is leaving something to be desired.
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+# Routes available
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+## Calendar
+Calendar of a club
 
-## Install the Application
+	/calendrier/club/{uniqueDivisionIndex}
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+Calendar of a division
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+	/calendrier/division/{uniqueDivisionIndex}
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+## Club details
+Infos
+
+	/club/{uniqueClubIndex}/infos
+
+Members
+
+	/club/{uniqueClubIndex}/membres
+
+Pratical infos
+
+	/club/{uniqueClubIndex}/pratiques
+
+Calendar
+
+	/club/{uniqueClubIndex}/calendrier
+
+List of strength
+
+	/club/{uniqueClubIndex}/force
+
+## Results
+Results of a division a given week number
+
+	/resultats/division/{division}/{jour}
+
+Match details
+
+	/resultats/match/{uniqueMatchIndex}
+
+## Ranking
+Get ranking of a division
+
+	/classements/{divisionUniqueIndex}/{weekNumber}
+
+## Player
+Get victories of a player
+
+	/joueur/{uniquePlayerIndex}/victoires
+
+Get defeats of a player
+
+	/joueur/{uniquePlayerIndex}/detaites
+
+Get info
+
+	/joueur/{uniquePlayerIndex}/infos
+
+## Misc
+Retrieve all clubs
+
+	/clubs
+Retrieve all divisions
+
+	/divisions
+Current week number
+
+	/journee
+# Install the Application
 
 * Point your virtual host document root to your new application's `public/` directory.
 * Ensure `logs/` is web writeable.
