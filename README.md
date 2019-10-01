@@ -1,4 +1,9 @@
+# DEPRECATED
+This was usefull with the old AFTT API. All those AFTT backends don't exist anymore. If you're interested to query AFTT database you must use [Tabt-API](https://github.com/gfrenoy/TabT-API)
+
 # AFTT reverse engineered API
+
+
 This api allows you to use the AFTT's API easier. It uses standard REST requests. The quality of the data coming from this API is leaving something to be desired.
 
 # Routes available
